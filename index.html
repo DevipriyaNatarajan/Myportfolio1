@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c51a2d102d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+  <div class="container">
+    
+      <a href="#" class="logo">Portfolio</a>
+      <nav>
+        <ul id="sidemenu">
+          <li> <a href="#header">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+         <!---- <li> <a href="#skills">Skills</a></li>-->
+          <li> <a href="#certificate">Certificates</a></li>
+          <li> <a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul> 
+        <i class="fas fa-bars" onclick="openmenu()"></i> 
+      </nav>
+      <div class="header-text">
+        <p> Front-End Developer and a budding Azure solution Architect</p>
+        <h1>Hi, It's me <span>Devipriya</span> </h1>
+      </div>
+    </div>
+  </div>
+      
+  <!------about---->
+
+  <div id="about">
+    <div class="container1">
+      <div class="row">
+        <div class="about-col-1">
+          <h1 class="sub-title">About Me</h1>
+          <p class="new">I am graduate of Electronics and communication Engineering, looking for a job in the field of IT where
+            I can showcase my potential to the maximum and controbute my technical and functional knowledge to the betterment of the organization and myself .<br />Ability to work under pressure & willing to learn new things.
+            Currently learning full stack web development by myself on the side from internet. Looking for an opportunity to start my career.
+          </p>
+          
+          
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links"onclick="opentab('Education')">Education</p>
+
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+
+            <ul>
+              <li><span>Front End Webdevelopment</span></li>
+              <li><span>Java</span></li>
+              <li><span>SQL</span></li>
+              <li><span>Microsoft Azure fundamentals</span></li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Education">
+            <ul>
+              <li><span>2015 - 2016</span><br>Secondary school leaving certificate</li>
+              <li><span>2017 - 2018</span><br>Higher secondary</li>
+              <li><span>2018 - 2022</span><br>Bachelor of Engineering</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div id="certificate">
+  <div class="certificate">
+    <div class="container">
+      <h1 class="new1">Certificates</h1>
+      <div class="certificates-list">
+        <div>
+          <i class="fa-brands fa-microsoft"></i>
+          <h2>Microsoft certified-Azure Fundamentals</h2>
+         
+          <p>knowledge of cloud computing concepts, models, and services, such as public, private, and hybrid cloud, in addition to infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS).</p>
+          <a href="https://learn.microsoft.com/api/credentials/share/en-us/DevipriyaN-2851/D4DDA58AFAD95888">view certificate</a>
+          <br/>
+          <a href="https://learn.microsoft.com/en-us/certifications/azure-fundamentals/">Learn more</a>
+        </div>
+        <div>
+          <i class="fab fa-aws"></i>
+          <h2>Ultimate AWS Certified cloud practitioner-2022</h2>
+          <p>Build, Deploy, and Manage Websites, Apps or Processes On AWS Secure, Reliable Network. Sign Up for a Free Account & Experience AWS Secure, Reliable, Scalable Services. In-Memory Caching</p>
+          <a href="https://www.udemy.com/certificate/UC-9f01e5cf-fbe9-48d5-b763-285442e4a710/">view certificate</a>
+          <br/>
+          <a href="https://aws.amazon.com/certification/">learn more</a>
+         </div>
+        <div>
+          <i class="fa-brands fa-python"></i>
+          <h2>Python complete course for beginners</h2>
+          <p>Python is a popular programming language.
+            Python can be used on a server to create web applications.</p>
+            <a href="https://www.udemy.com/certificate/UC-af839c35-32cc-4de3-8876-d886b1fc5e1b/">view certificate</a>
+            <br/>
+          <a href="https://www.w3schools.com/python/">Learn more</a>
+        </div>
+      </div>
+    
+
+      </div>
+    </div>
+  </div>
+  <!-----contact------>
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="new1">Contact Me</h1>
+          <p><i class="fas fa-paper-plane"></i>priyanatarajan02012001@gmail.com</p>
+          <p><i class="fas fa-phone-square-alt"></i>6382205771</p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/devipriya-n-a33b61262/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/home"><i class="fab fa-twitter-square"></i></a>
+          </div>
+          <a href="https://drive.google.com/file/d/1LgDVjNKsgsAhGRppwojJsbLhWCzxLj5N/view?usp=drive_link" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form>
+            <input type="text" name="Name" placeholder="Youe Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="Submit" class="btn btn2">Submit</button>  
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+      sidemenu.style.right="0";
+    }
+    function closemenu(){
+      sidemenu.style.right="-200px";
+    }
+
+  </script>
+  
+</body>
+</html>
